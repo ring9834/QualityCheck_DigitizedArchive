@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD0B8308-0758-4B67-ACAA-A498E3F740B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Prj_FileManageNCheckApp</RootNamespace>
+    <AssemblyName>Prj_FileManageNCheckApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\FileManageNExamine.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\DLLReferenced\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\DLLReferenced\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\DLLReferenced\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\DLLReferenced\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\DLLReferenced\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\DLLReferenced\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\ContentFileDAO.cs" />
+    <Compile Include="DAL\DataDictionaryDAO.cs" />
+    <Compile Include="DAL\ConfigCodeDAO.cs" />
+    <Compile Include="DAL\ArchiveNoDAO.cs" />
+    <Compile Include="DAL\ReceiveCatalogeDAO.cs" />
+    <Compile Include="DAL\BunchEditDAO.cs" />
+    <Compile Include="DAL\SearchDAO.cs" />
+    <Compile Include="DAL\FieldShowListDAO.cs" />
+    <Compile Include="DAL\ManualCheckDAO.cs" />
+    <Compile Include="DAL\DataFlowDAO.cs" />
+    <Compile Include="DAL\ReportDAO.cs" />
+    <Compile Include="Data\SuperSearchConditionEntity.cs" />
+    <Compile Include="Data\SerializableDictionary.cs" />
+    <Compile Include="DAL\MainFormDAO.cs" />
+    <Compile Include="Pages\DataCountReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\DataCountReport.Designer.cs">
+      <DependentUpon>DataCountReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ParametersForChildForms.cs" />
+    <Compile Include="Data\ReportConditionEntity.cs" />
+    <Compile Include="Pages\ImageFileContentBrower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ImageFileContentBrower.Designer.cs">
+      <DependentUpon>ImageFileContentBrower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_NoYwNNoCataloge_Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_NoYwNNoCataloge_Image.Designer.cs">
+      <DependentUpon>AutoFileCheck_NoYwNNoCataloge_Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_PageLeftAndReadablecs_Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_PageLeftAndReadablecs_Image.Designer.cs">
+      <DependentUpon>AutoFileCheck_PageLeftAndReadablecs_Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FindDataSources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\FindDataSources.Designer.cs">
+      <DependentUpon>FindDataSources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FieldShowList_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\FieldShowList_Config.Designer.cs">
+      <DependentUpon>FieldShowList_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SuperSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SuperSearch.Designer.cs">
+      <DependentUpon>SuperSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\StorehouseKindDAO.cs" />
+    <Compile Include="Unitlty\VerifyPageAccess.cs" />
+    <Compile Include="Data\ColDictionary.cs" />
+    <Compile Include="Pages\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BusinessDataDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\BusinessDataDictionary.Designer.cs">
+      <DependentUpon>BusinessDataDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RecordsBunchEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\RecordsBunchEdit.Designer.cs">
+      <DependentUpon>RecordsBunchEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShowHintInfoDynamically.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ShowHintInfoDynamically.Designer.cs">
+      <DependentUpon>ShowHintInfoDynamically.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PublicDataDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\PublicDataDictionary.Designer.cs">
+      <DependentUpon>PublicDataDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unitlty\ConfigUtils.cs" />
+    <Compile Include="Unitlty\GridViewUtility.cs" />
+    <Compile Include="Pages\ArchiveKinds_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ArchiveKinds_Config.Designer.cs">
+      <DependentUpon>ArchiveKinds_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttachedCodeClass.cs" />
+    <Compile Include="Data\NodeEditingType.cs" />
+    <Compile Include="Pages\FieldShowType_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\FieldShowType_Config.Designer.cs">
+      <DependentUpon>FieldShowType_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SystemCode_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SystemCode_Config.Designer.cs">
+      <DependentUpon>SystemCode_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unitlty\AppConfigModify.cs" />
+    <Compile Include="Pages\ContentFile_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ContentFile_Config.Designer.cs">
+      <DependentUpon>ContentFile_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_Config.Designer.cs">
+      <DependentUpon>AutoFileCheck_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ArchiveNoGenerate Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ArchiveNoGenerate Config.Designer.cs">
+      <DependentUpon>ArchiveNoGenerate Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ArchiveNumMakeup.cs" />
+    <Compile Include="Data\ComboboxItem.cs" />
+    <Compile Include="Pages\AutoFileCheck_ImageEgdeNLean.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_ImageEgdeNLean.Designer.cs">
+      <DependentUpon>AutoFileCheck_ImageEgdeNLean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_PageLeftAndReadablecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_PageLeftAndReadablecs.Designer.cs">
+      <DependentUpon>AutoFileCheck_PageLeftAndReadablecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_NoYwNNoCataloge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AutoFileCheck_NoYwNNoCataloge.Designer.cs">
+      <DependentUpon>AutoFileCheck_NoYwNNoCataloge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BaseClasses.cs" />
+    <Compile Include="Data\CatalogRecord.cs" />
+    <Compile Include="Data\SearchConditionEntity.cs" />
+    <Compile Include="Pages\FileConnectWithCataloge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\FileConnectWithCataloge.Designer.cs">
+      <DependentUpon>FileConnectWithCataloge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManualCheck_ErrorRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ManualCheck_ErrorRecord.Designer.cs">
+      <DependentUpon>ManualCheck_ErrorRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManualCheck_Goto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ManualCheck_Goto.Designer.cs">
+      <DependentUpon>ManualCheck_Goto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrimarySearch_SearchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\PrimarySearch_SearchResult.Designer.cs">
+      <DependentUpon>PrimarySearch_SearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrimarySearch_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\PrimarySearch_Config.Designer.cs">
+      <DependentUpon>PrimarySearch_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\ManualCheck_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ManualCheck_Config.Designer.cs">
+      <DependentUpon>ManualCheck_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReceiveCatalogeProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ReceiveCatalogeProgress.Designer.cs">
+      <DependentUpon>ReceiveCatalogeProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShowRcdsForCheckingPageNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ShowRcdsForCheckingPageNumber.Designer.cs">
+      <DependentUpon>ShowRcdsForCheckingPageNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unitlty\ExcelHelper.cs" />
+    <Compile Include="Unitlty\PageControlLocation.cs" />
+    <Compile Include="Unitlty\PagerUtils.cs" />
+    <Compile Include="Unitlty\RoteImageClass.cs" />
+    <Compile Include="Pages\UserConfig_Role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\UserConfig_Role.Designer.cs">
+      <DependentUpon>UserConfig_Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserConfig_Access.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\UserConfig_Access.Designer.cs">
+      <DependentUpon>UserConfig_Access.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserConfig_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\UserConfig_User.Designer.cs">
+      <DependentUpon>UserConfig_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\XtraGoFrontBack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\XtraGoFrontBack.Designer.cs">
+      <DependentUpon>XtraGoFrontBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\XtraDeleteButtonForGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\XtraDeleteButtonForGrid.Designer.cs">
+      <DependentUpon>XtraDeleteButtonForGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserEntity.cs" />
+    <Compile Include="Pages\WorkFlow_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\WorkFlow_Config.Designer.cs">
+      <DependentUpon>WorkFlow_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\XtraWorkFlow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\XtraWorkFlow.Designer.cs">
+      <DependentUpon>XtraWorkFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\UserDAO.cs" />
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\XtraPagedNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\XtraPagedNavigation.Designer.cs">
+      <DependentUpon>XtraPagedNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\XtraUpdateButtonForGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\XtraUpdateButtonForGrid.Designer.cs">
+      <DependentUpon>XtraUpdateButtonForGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraDataReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraDataReport.Designer.cs">
+      <DependentUpon>XtraDataReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\XtraSuperSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\XtraSuperSearch.Designer.cs">
+      <DependentUpon>XtraSuperSearch.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\DataCountReport.resx">
+      <DependentUpon>DataCountReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AutoFileCheck_NoYwNNoCataloge_Image.resx">
+      <DependentUpon>AutoFileCheck_NoYwNNoCataloge_Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AutoFileCheck_PageLeftAndReadablecs_Image.resx">
+      <DependentUpon>AutoFileCheck_PageLeftAndReadablecs_Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FindDataSources.resx">
+      <DependentUpon>FindDataSources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\BusinessDataDictionary.resx">
+      <DependentUpon>BusinessDataDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ImageFileContentBrower.resx">
+      <DependentUpon>ImageFileContentBrower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FieldShowList_Config.resx">
+      <DependentUpon>FieldShowList_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RecordsBunchEdit.resx">
+      <DependentUpon>RecordsBunchEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ShowHintInfoDynamically.resx">
+      <DependentUpon>ShowHintInfoDynamically.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ArchiveKinds_Config.resx">
+      <DependentUpon>ArchiveKinds_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FieldShowType_Config.resx">
+      <DependentUpon>FieldShowType_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ContentFile_Config.resx">
+      <DependentUpon>ContentFile_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ArchiveNoGenerate Config.resx">
+      <DependentUpon>ArchiveNoGenerate Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AutoFileCheck_Config.resx">
+      <DependentUpon>AutoFileCheck_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AutoFileCheck_ImageEgdeNLean.resx">
+      <DependentUpon>AutoFileCheck_ImageEgdeNLean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AutoFileCheck_PageLeftAndReadablecs.resx">
+      <DependentUpon>AutoFileCheck_PageLeftAndReadablecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AutoFileCheck_NoYwNNoCataloge.resx">
+      <DependentUpon>AutoFileCheck_NoYwNNoCataloge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FileConnectWithCataloge.resx">
+      <DependentUpon>FileConnectWithCataloge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ManualCheck_ErrorRecord.resx">
+      <DependentUpon>ManualCheck_ErrorRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ManualCheck_Goto.resx">
+      <DependentUpon>ManualCheck_Goto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PrimarySearch_SearchResult.resx">
+      <DependentUpon>PrimarySearch_SearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PrimarySearch_Config.resx">
+      <DependentUpon>PrimarySearch_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ReceiveCatalogeProgress.resx">
+      <DependentUpon>ReceiveCatalogeProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SystemCode_Config.resx">
+      <DependentUpon>SystemCode_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UserConfig_User.resx">
+      <DependentUpon>UserConfig_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\WorkFlow_Config.resx">
+      <DependentUpon>WorkFlow_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Pages\ManualCheck_Config.resx">
+      <DependentUpon>ManualCheck_Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ShowRcdsForCheckingPageNumber.resx">
+      <DependentUpon>ShowRcdsForCheckingPageNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PublicDataDictionary.resx">
+      <DependentUpon>PublicDataDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UserConfig_Role.resx">
+      <DependentUpon>UserConfig_Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UserConfig_Access.resx">
+      <DependentUpon>UserConfig_Access.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SuperSearch.resx">
+      <DependentUpon>SuperSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\XtraDeleteButtonForGrid.resx">
+      <DependentUpon>XtraDeleteButtonForGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\XtraGoFrontBack.resx">
+      <DependentUpon>XtraGoFrontBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\XtraSuperSearch.resx">
+      <DependentUpon>XtraSuperSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\XtraUpdateButtonForGrid.resx">
+      <DependentUpon>XtraUpdateButtonForGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\XtraWorkFlow.resx">
+      <DependentUpon>XtraWorkFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\XtraPagedNavigation.resx">
+      <DependentUpon>XtraPagedNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraDataReport.resx">
+      <DependentUpon>XtraDataReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Donet.DbUtilities\DotNet.DbUtilities.csproj">
+      <Project>{07950544-c2f0-4484-b895-70be986c2f88}</Project>
+      <Name>DotNet.DbUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Donet.Utility\DotNet.Utilities.csproj">
+      <Project>{892f79d9-4209-409f-a9b8-016738859812}</Project>
+      <Name>DotNet.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录界面21.png" />
+    <None Include="Resources\登录界面2.png" />
+    <None Include="Resources\登录界面.jpg" />
+    <None Include="Resources\delete.png" />
+    <Content Include="Resources\FileManageNExamine.ico" />
+    <None Include="Resources\nodepic.png" />
+    <None Include="Resources\login_main1.jpg" />
+    <None Include="Resources\login_bottom.jpg" />
+    <None Include="Resources\login_main.jpg" />
+    <None Include="Resources\folder1.png" />
+    <None Include="Resources\folder21.png" />
+    <None Include="Resources\folder2.png" />
+    <None Include="Resources\haveerror.png" />
+    <None Include="Resources\finish.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
